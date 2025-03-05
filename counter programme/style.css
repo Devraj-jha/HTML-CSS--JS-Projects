@@ -1,22 +1,140 @@
+/* General body styling */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  flex-direction: column;
+}
+
+/* Heading styling */
 #Heading {
-  text-align: center;
-  display: block;
-  font-family: monospace;
-  font-size: 6em;
-  margin-bottom: 3px;
+  font-size: 4rem;
+  color: #333;
+  margin-bottom: 20px;
 }
-Div {
-  text-align: center;
+
+/* Container for buttons */
+.Div {
+  display: flex;
+  gap: 15px;
 }
+
+/* Base button styling */
 .buttons {
-  padding: 10px 20px;
-  font-size: 1.5em;
+  padding: 15px 30px;
+  font-size: 1.2rem;
   color: white;
-  background-color: hsl(214, 100%, 74%);
-  border-radius: 5px;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.25s;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Hover effect */
 .buttons:hover {
-  background-color: rgb(44, 44, 206);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Active (click) effect */
+.buttons:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ripple effect animation */
+.buttons::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.buttons:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Specific button colors */
+#decreaseBtn {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+#resetBtn {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+#increaseBtn {
+  background: linear-gradient(135deg, #4776e6, #8e54e9);
+}
+
+/* Hover colors for specific buttons */
+#decreaseBtn:hover {
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+#resetBtn:hover {
+  background: linear-gradient(135deg, #96c93d, #00b09b);
+}
+
+#increaseBtn:hover {
+  background: linear-gradient(135deg, #8e54e9, #4776e6);
+}
+
+/* Fire effect animation */
+@keyframes fireEffect {
+  0% {
+    text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500,
+      0 0 40px #ff4500;
+  }
+  50% {
+    text-shadow: 0 0 10px #ff8c00, 0 0 20px #ff8c00, 0 0 40px #ff8c00,
+      0 0 80px #ff8c00;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff4500, 0 0 10px #ff4500, 0 0 20px #ff4500,
+      0 0 40px #ff4500;
+  }
+}
+
+/* Ice effect animation */
+@keyframes iceEffect {
+  0% {
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 20px #00bfff,
+      0 0 40px #00bfff;
+  }
+  50% {
+    text-shadow: 0 0 10px #87ceeb, 0 0 20px #87ceeb, 0 0 40px #87ceeb,
+      0 0 80px #87ceeb;
+  }
+  100% {
+    text-shadow: 0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 20px #00bfff,
+      0 0 40px #00bfff;
+  }
+}
+
+/* Apply fire effect */
+.fire-effect {
+  animation: fireEffect 1s ease-in-out;
+}
+
+/* Apply ice effect */
+.ice-effect {
+  animation: iceEffect 1s ease-in-out;
 }
