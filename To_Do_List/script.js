@@ -7,7 +7,7 @@ const addtask = document.getElementById("addtask")
 function addTask() {
 
     const text = taskinput.value.trim();
-    if(!text) retun;
+    if(!text) retun; 
 
 
     const li = document.createElement("li");
@@ -16,8 +16,19 @@ function addTask() {
     span.textContent = text;
     li.appendChild(span);
 
+
+    const complete = document.createElement('button')
+    complete.textContent = 'complete'
+    complete.style.marginLeft = '10px'
+
+    complete.addEventListener('click',() =>{
+      li.classList.toggle('completed')
+    })
+
+    li.appendChild(complete)
     tasklist.appendChild(li);
     taskinput.value = '';
     taskinput.focus();
 }
   addtask.addEventListener('click', addTask);
+  
