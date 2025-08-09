@@ -1,0 +1,47 @@
+Project counter app learnings..
+//what is div. 
+
+div stands for division in html
+
+container elements
+=> grps realted elements
+div is a block level 
+{block level = whole line}
+
+Event listners ?
+
+It watches for specific events (like a button click, key press, mouse movement, etc.) and then runs some code when that event happens.
+
+it has 3 steps...
+
+The target — what you’re watching (button, div, window, etc.).
+
+The event type — what action you’re looking for (click, mouseover, keydown, etc.).
+
+The callback function — the code that runs when the event happens.
+
+
+
+
+
+document.getElementById("increase")
+    .addEventListener("click", function() {
+        console.log("Button clicked!");
+    });
+
+
+Target: The increase button (document.getElementById("increase")).
+
+Event type: "click" (fires when the user clicks the button).
+
+Callback: The function() { console.log("Button clicked!"); }.
+
+
+text content
+
+is a js property.. that lets you get or set a text
+inside a html element
+
+deals with only html tag
+
+
