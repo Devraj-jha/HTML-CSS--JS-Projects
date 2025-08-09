@@ -25,10 +25,13 @@ function addTask() {
       li.classList.toggle('completed')
     })
 
+
+
+
     li.appendChild(complete)
     tasklist.appendChild(li);
     taskinput.value = '';
     taskinput.focus();
 }
   addtask.addEventListener('click', addTask);
-  
+
