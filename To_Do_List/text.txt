@@ -1,0 +1,31 @@
+when user type soemthing.. 
+
+clicks on add task button..
+task appears in ul
+
+when click the list get strike throguhg
+clicks delets and it get removed
+
+
+//li
+
+<li> elemetns means list items 
+used insdie an unorded list
+
+display a bullet or number 
+
+
+//span is like div but it is inline it has no value or anything... 
+
+//create elemetn 
+
+document.createElement(...)
+
+Create list item and span
+
+const li = document.createElement('li');
+const span = document.createElement('span');
+document.createElement('li') → Makes a new empty <li> element in memory (not on the page yet).
+
+document.createElement('span') → Makes a new empty <span> element (also just in memory).
+
